@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fabric-logging"
+dynamic = ["version"]
+description = "Logging utilities for Microsoft Fabric notebooks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Gray Sinclair" }]
+
+# --- Hatch version from VCS tags ---
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fabric_logging"]
