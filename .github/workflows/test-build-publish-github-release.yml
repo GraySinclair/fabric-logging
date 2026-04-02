@@ -19,9 +19,8 @@
 name: Test, Build, and Publish GitHub Release
 
 on:
-  push:
-    tags:
-      - "v*.*.*"
+  release:
+    types: [published]
 
 permissions:
   # Required so the workflow can create a GitHub Release.
