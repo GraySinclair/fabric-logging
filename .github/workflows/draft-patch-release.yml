@@ -1,5 +1,5 @@
-# Friendly name shown in the GitHub Actions UI.
-name: Create patch release
+# Name shown in the GitHub Actions UI.
+name: Draft GitHub release
 
 # Defines what event triggers this workflow.
 on:
@@ -89,4 +89,5 @@ jobs:
           # --generate-notes tells GitHub to auto-generate release notes.
           gh release create "${{ steps.version.outputs.next_tag }}" \
             --title "${{ steps.version.outputs.next_tag }}" \
-            --generate-notes
+            --generate-notes \
+            --draft
